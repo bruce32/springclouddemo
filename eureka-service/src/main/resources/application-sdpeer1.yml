@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: servicediscovery
+server:
+  port: 7101
+eureka:
+  instance:
+    hostname: sdpeer1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://sdpeer2:7102/eureka,http://sdpeer3:7103/eureka
